@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+:root {
+  --bg-cream: #FAF6F0;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --deep-teal: #084C61;
+  --sage-green: #2E7D32;
+  --warm-orange: #E65100;
+  --soft-border: rgba(232, 223, 213, 0.8);
+  --text-main: #2C3531;
+  --text-muted: #5C6B64;
+}
+
+body {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  background: linear-gradient(135deg, #FAF6F0 0%, #F5EFE6 50%, #EFEBE4 100%);
+  color: var(--text-main);
+  min-h: 100vh;
+}
+
+.font-serif {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.font-sans {
+  font-family: var(--font-plus-jakarta), sans-serif;
+}
+
+/* Keyframe Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseGlowEco {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(46, 125, 50, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(230, 81, 0, 0.35);
+  }
+}
+
+/* Animation Classes */
+.animate-slide-up {
+  animation: slideInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 4.5s ease-in-out infinite;
+}
+
+.animate-pulse-glow-eco {
+  animation: pulseGlowEco 3s ease-in-out infinite;
+}
+
+/* Glassmorphism Design System for Eco Theme */
+.eco-glass-card {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(8, 76, 97, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.eco-card-hover {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 223, 213, 0.9);
+  box-shadow: 0 10px 30px rgba(8, 76, 97, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.eco-card-hover:hover {
+  transform: translateY(-8px) scale(1.01);
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(46, 125, 50, 0.4);
+  box-shadow: 0 22px 45px rgba(8, 76, 97, 0.12), inset 0 0 12px rgba(46, 125, 50, 0.05);
+}
+
+/* Glass Shine Overlay Effect on Card Hover */
+.eco-card-hover::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%) rotate(25deg);
+  transition: transform 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+.eco-card-hover:hover::after {
+  transform: translateX(100%) rotate(25deg);
+}
+
+.eco-glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 40px rgba(8, 76, 97, 0.06);
+}
+
+.glass-pill-eco {
+  background: rgba(250, 246, 240, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(232, 223, 213, 0.8);
+  transition: all 0.25s ease;
+}
+
+.glass-pill-eco:hover {
+  background: rgba(46, 125, 50, 0.08);
+  border-color: rgba(46, 125, 50, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Button Animations & Glass Styling */
+.btn-eco-primary {
+  background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-eco-primary:hover {
+  background: linear-gradient(135deg, #E65100 0%, #C44400 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(230, 81, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-eco-primary:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.btn-eco-secondary {
+  background: rgba(255, 255, 255, 0.85);
+  color: #084C61;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(46, 125, 50, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.btn-eco-secondary:hover {
+  background: rgba(46, 125, 50, 0.08);
+  color: #2E7D32;
+  border-color: rgba(46, 125, 50, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.12);
+}
+
+.btn-eco-accent {
+  background: linear-gradient(135deg, #E65100 0%, #C44400 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(230, 81, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-eco-accent:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(230, 81, 0, 0.45);
+}
+
+/* Image Container Glass Frame */
+.eco-img-container {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(250, 246, 240, 0.8) 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 0 20px rgba(46, 125, 50, 0.03);
+}
