@@ -135,7 +135,7 @@ export default function EcoDistributorsPage() {
           </div>
 
           {/* Right Dealer Application Glass Form */}
-          <div className="lg:col-span-7 eco-glass-card p-8 sm:p-10 rounded-3xl border border-white/90 shadow-2xl animate-slide-right">
+          <div className="lg:col-span-7 eco-glass-card p-5 sm:p-10 rounded-3xl border border-white/90 shadow-2xl animate-slide-right">
             {formSubmitted ? (
               <div className="text-center py-12 space-y-4">
                 <div className="w-16 h-16 bg-emerald-100 text-[#2E7D32] rounded-full flex items-center justify-center mx-auto shadow-md">
@@ -292,9 +292,9 @@ export default function EcoDistributorsPage() {
 
                   <button
                     type="submit"
-                    className="w-full btn-eco-primary py-4 rounded-full font-bold text-sm shadow-lg mt-2 flex items-center justify-center gap-2"
+                    className="w-full btn-eco-primary py-3.5 sm:py-4 px-4 rounded-full font-bold text-xs sm:text-sm shadow-lg mt-2 flex items-center justify-center gap-2"
                   >
-                    <Send className="w-4 h-4" /> Submit Eco Wholesale Application
+                    <Send className="w-4 h-4 shrink-0" /> Submit Eco Wholesale Application
                   </button>
                 </form>
               </div>

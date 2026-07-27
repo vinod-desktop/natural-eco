@@ -59,17 +59,17 @@ export default function EcoHomePage() {
             </p>
 
             {/* Glassmorphic Action Routing Buttons */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3.5 pt-2">
               <Link
                 href="/products"
-                className="btn-eco-primary px-8 py-4 rounded-full font-bold text-sm shadow-lg flex items-center gap-2.5 group"
+                className="btn-eco-primary px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm shadow-lg flex items-center justify-center gap-2.5 group whitespace-nowrap"
               >
                 Explore Botanical Catalog{" "}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <button
                 onClick={() => openModal("Natural Eco Wholesale Inquiry")}
-                className="btn-eco-secondary px-8 py-4 rounded-full font-bold text-sm"
+                className="btn-eco-secondary px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm whitespace-nowrap flex items-center justify-center"
               >
                 Request Free Sample Kit
               </button>
@@ -237,16 +237,16 @@ export default function EcoHomePage() {
             <p className="text-xs sm:text-sm text-[#5C6B64] max-w-2xl mx-auto leading-relaxed font-medium">
               Supply your organic retail store, zero-waste shop, or hotel chain with India&apos;s trusted botanical cleaning brand.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 pt-2">
               <Link
                 href="/distributors"
-                className="btn-eco-primary px-8 py-4 rounded-full font-bold text-sm shadow-lg flex items-center gap-2"
+                className="btn-eco-primary px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm shadow-lg flex items-center justify-center gap-2 whitespace-nowrap"
               >
                 Apply For Wholesale <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/contact"
-                className="btn-eco-secondary px-8 py-4 rounded-full font-bold text-sm"
+                className="btn-eco-secondary px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm flex items-center justify-center whitespace-nowrap"
               >
                 Contact Eco Desk
               </Link>

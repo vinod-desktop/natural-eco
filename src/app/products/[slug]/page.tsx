@@ -175,18 +175,18 @@ export default function EcoProductDetailPage() {
             <div className="pt-4 flex flex-col sm:flex-row gap-3">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="flex-1 btn-eco-primary py-4 rounded-full font-bold text-sm shadow-lg flex items-center justify-center gap-2"
+                className="flex-1 btn-eco-primary py-3.5 sm:py-4 px-4 rounded-full font-bold text-xs sm:text-sm shadow-lg flex items-center justify-center gap-2"
               >
-                <Send className="w-4 h-4" /> Request Botanical Sample / Quote
+                <Send className="w-4 h-4 shrink-0" /> Request Sample / Quote
               </button>
 
               <a
                 href={`https://wa.me/919825000000?text=${whatsappText}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white py-4 rounded-full font-bold text-sm shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2"
+                className="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white py-3.5 sm:py-4 px-4 rounded-full font-bold text-xs sm:text-sm shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2"
               >
-                <MessageCircle className="w-4 h-4" /> WhatsApp Quick Desk
+                <MessageCircle className="w-4 h-4 shrink-0" /> WhatsApp Quick Desk
               </a>
             </div>
           </div>

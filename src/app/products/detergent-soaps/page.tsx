@@ -95,13 +95,13 @@ export default function EcoDetergentSoapsPage() {
               <div className="px-6 pb-6 pt-4 border-t border-[#E8DFD5] flex items-center justify-between gap-3 bg-white/40">
                 <Link
                   href={`/products/${p.slug}`}
-                  className="text-xs font-bold text-[#2E7D32] hover:underline flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+                  className="text-xs font-bold text-[#2E7D32] hover:underline flex items-center gap-1 group-hover:translate-x-1 transition-transform whitespace-nowrap"
                 >
                   View Details &rarr;
                 </Link>
                 <button
                   onClick={() => openInquiry(p.name)}
-                  className="btn-eco-accent px-4 py-2 rounded-full font-bold text-xs shadow-md"
+                  className="btn-eco-accent px-3.5 py-2 rounded-full font-bold text-xs shadow-md whitespace-nowrap shrink-0"
                 >
                   Request Sample
                 </button>

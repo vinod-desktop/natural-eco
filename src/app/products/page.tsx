@@ -100,12 +100,12 @@ export default function EcoProductsOverviewPage() {
 
       {/* Filter & Product List */}
       <section className="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 eco-glass-panel p-4 rounded-2xl border border-white/80">
-          {/* Glassy Category Filter Tabs with Shutter Trigger */}
-          <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 eco-glass-panel p-3.5 sm:p-4 rounded-2xl border border-white/80">
+          {/* Glassy Category Filter Tabs with Horizontal Scroll for Mobile */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-1.5 md:pb-0 scrollbar-none">
             <button
               onClick={() => handleCategoryChange("all")}
-              className={`px-4 py-2 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 ${
+              className={`px-3.5 py-2 rounded-full font-bold text-xs sm:text-sm whitespace-nowrap shrink-0 transition-all duration-300 ${
                 selectedCategory === "all"
                   ? "bg-[#2E7D32] text-white shadow-md scale-105"
                   : "bg-white/80 text-[#2C3531] border border-[#E8DFD5] hover:bg-emerald-50"
@@ -115,7 +115,7 @@ export default function EcoProductsOverviewPage() {
             </button>
             <button
               onClick={() => handleCategoryChange("detergent-soaps")}
-              className={`px-4 py-2 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 ${
+              className={`px-3.5 py-2 rounded-full font-bold text-xs sm:text-sm whitespace-nowrap shrink-0 transition-all duration-300 ${
                 selectedCategory === "detergent-soaps"
                   ? "bg-[#2E7D32] text-white shadow-md scale-105"
                   : "bg-white/80 text-[#2C3531] border border-[#E8DFD5] hover:bg-emerald-50"
@@ -125,7 +125,7 @@ export default function EcoProductsOverviewPage() {
             </button>
             <button
               onClick={() => handleCategoryChange("liquid-cleaners")}
-              className={`px-4 py-2 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 ${
+              className={`px-3.5 py-2 rounded-full font-bold text-xs sm:text-sm whitespace-nowrap shrink-0 transition-all duration-300 ${
                 selectedCategory === "liquid-cleaners"
                   ? "bg-[#2E7D32] text-white shadow-md scale-105"
                   : "bg-white/80 text-[#2C3531] border border-[#E8DFD5] hover:bg-emerald-50"
@@ -136,7 +136,7 @@ export default function EcoProductsOverviewPage() {
           </div>
 
           {/* Search Box */}
-          <div className="relative min-w-[260px]">
+          <div className="relative w-full md:w-auto md:min-w-[260px]">
             <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
             <input
               type="text"
@@ -193,13 +193,13 @@ export default function EcoProductsOverviewPage() {
               <div className="px-6 pb-6 pt-4 border-t border-[#E8DFD5] flex items-center justify-between gap-3 bg-white/40">
                 <Link
                   href={`/products/${p.slug}`}
-                  className="text-xs font-bold text-[#2E7D32] hover:underline flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+                  className="text-xs font-bold text-[#2E7D32] hover:underline flex items-center gap-1 group-hover:translate-x-1 transition-transform whitespace-nowrap"
                 >
                   Details & Specs &rarr;
                 </Link>
                 <button
                   onClick={() => openInquiry(p.name)}
-                  className="btn-eco-accent px-4 py-2 rounded-full font-bold text-xs shadow-md"
+                  className="btn-eco-accent px-3.5 py-2 rounded-full font-bold text-xs shadow-md whitespace-nowrap shrink-0"
                 >
                   Request Sample
                 </button>
